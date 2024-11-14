@@ -6,14 +6,14 @@
 // Siga os comentários para implementar cada parte do desafio.
 int main() {
     // Declarando variaveis para armazenar estados
-    char estado_01[30];
-    char estado_02[30];
-    char estado_03[30];
-    char estado_04[30];
-    char estado_05[30];
-    char estado_06[30];
-    char estado_07[30];
-    char estado_08[30];
+    char estado_A[30];
+    char estado_B[30];
+    char estado_C[30];
+    char estado_D[30];
+    char estado_E[30];
+    char estado_F[30];
+    char estado_G[30];
+    char estado_H[30];
 
     // Declarando variaveis para armazenar nome da cidade.
     char cidade_01[30];
@@ -26,14 +26,15 @@ int main() {
     float populacao, km_area, pib;    
     int pontos_turisticos;
 
-    // atribuindo valor a variavel "estado-01".
+    // atribuindo valor a variavel "estado_A".
     printf("Digite o nome do Estado:\n");
-    scanf("%s", &estado_01);      
+    scanf("%s", &estado_A);      
 
     // Mensagem de sucesso.
     printf("\nEstado cadastrado com sucesso!!\n");
 
-    printf("Digite o nome da 1° cidade do estado de %s \n", estado_01);
+    // Cadastro da primeira cidade do estado_A.
+    printf("Digite o nome da 1° cidade do estado de %s \n", estado_A);
     scanf("%s", &cidade_01);
 
     printf("Digite o código da cidade: \n");
@@ -56,6 +57,96 @@ int main() {
 
     // Exibição dos Dados das Cartas:
     printf("\nCidade: %s \n", cidade_01);
+    printf("Código: %d \n", cod_cidade);
+    printf("População: %f \n", populacao);
+    printf("Área: %f \n", km_area);
+    printf("PIB: %f \n", pib);
+    printf("Pontos Turísticos: %d \n", pontos_turisticos);
+
+     // Cadastro da segunda cidade do "estado A".
+    printf("Digite o nome da 2° cidade do estado de %s \n", estado_A);
+    scanf("%s", &cidade_02);
+
+    printf("Digite o código da cidade: \n");
+    scanf("%d", &cod_cidade);
+
+    printf("Digite a densidade populacional da cidade:\n");
+    scanf("%f", &populacao);
+
+    printf("Digite a área em Km²: \n");
+    scanf("%f", &km_area);
+
+    printf("Digite o PIB da cidade: \n");
+    scanf("%f", &pib);
+
+    printf("Digite o número de pontos turísticos: \n");
+    scanf("%d", &pontos_turisticos);       
+
+   // Mensagem de sucesso ao cadastrar
+    printf("\nCarta cadastrada com sucesso! \n");
+
+    // Exibição dos Dados das Cartas:
+    printf("\nCidade: %s \n", cidade_02);
+    printf("Código: %d \n", cod_cidade);
+    printf("População: %f \n", populacao);
+    printf("Área: %f \n", km_area);
+    printf("PIB: %f \n", pib);
+    printf("Pontos Turísticos: %d \n", pontos_turisticos);
+
+     // Cadastro da terceira cidade do "estado A".
+    printf("Digite o nome da 3° cidade do estado de %s \n", estado_A);
+    scanf("%s", &cidade_03);
+
+    printf("Digite o código da cidade: \n");
+    scanf("%d", &cod_cidade);
+
+    printf("Digite a densidade populacional da cidade:\n");
+    scanf("%f", &populacao);
+
+    printf("Digite a área em Km²: \n");
+    scanf("%f", &km_area);
+
+    printf("Digite o PIB da cidade: \n");
+    scanf("%f", &pib);
+
+    printf("Digite o número de pontos turísticos: \n");
+    scanf("%d", &pontos_turisticos);       
+
+   // Mensagem de sucesso ao cadastrar
+    printf("\nCarta cadastrada com sucesso! \n");
+
+    // Exibição dos Dados das Cartas:
+    printf("\nCidade: %s \n", cidade_03);
+    printf("Código: %d \n", cod_cidade);
+    printf("População: %f \n", populacao);
+    printf("Área: %f \n", km_area);
+    printf("PIB: %f \n", pib);
+    printf("Pontos Turísticos: %d \n", pontos_turisticos);
+
+     // Cadastro da quarta cidade do "estado A".
+    printf("Digite o nome da 4° cidade do estado de %s \n", estado_A);
+    scanf("%s", &cidade_04);
+
+    printf("Digite o código da cidade: \n");
+    scanf("%d", &cod_cidade);
+
+    printf("Digite a densidade populacional da cidade:\n");
+    scanf("%f", &populacao);
+
+    printf("Digite a área em Km²: \n");
+    scanf("%f", &km_area);
+
+    printf("Digite o PIB da cidade: \n");
+    scanf("%f", &pib);
+
+    printf("Digite o número de pontos turísticos: \n");
+    scanf("%d", &pontos_turisticos);       
+
+   // Mensagem de sucesso ao cadastrar
+    printf("\nCarta cadastrada com sucesso! \n");
+
+    // Exibição dos Dados das Cartas:
+    printf("\nCidade: %s \n", cidade_04);
     printf("Código: %d \n", cod_cidade);
     printf("População: %f \n", populacao);
     printf("Área: %f \n", km_area);

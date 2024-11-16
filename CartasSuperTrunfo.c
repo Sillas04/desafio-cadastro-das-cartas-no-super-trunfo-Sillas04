@@ -39,6 +39,8 @@ int main() {
 
     printf("Digite o código da cidade: \n");
     scanf("%d", &cod_cidade);
+    //você está usando a mesma variável para todas as cidades, quando você ler para a cidade_02, o conteúdo vai ser sobreposto. 
+    //Você precisa criar uma variável para cada cidade, assim como para população, area, pib....
 
     printf("Digite a densidade populacional da cidade:\n");
     scanf("%f", &populacao);

@@ -59,13 +59,15 @@ int main() {
     scanf("%d", &pontos_turisticos_c1);
 
     // Calculo da densidade populacional
+    //************ Aqui você pode usar o (float), porque ele consome menos memória que o (double)
     densidade_pp01 = (double) habitantes_c1 / km_area_c1;
 
     pib_capta01 = (double) (pib_c1 * 1e9) / habitantes_c1;         
 
    // Mensagem de sucesso ao cadastrar
     printf("\n****** Carta cadastrada com sucesso! ****** \n\n");
-
+    
+    //************* Eu colocaria a impressão dos dados na carta no final, depois de cadastrar as duas cidades.
     // Exibição dos Dados das Cartas:
     printf("Cidade: %s \n", cidade_01);
     printf("Código: %s \n", cod_cidade01);
@@ -113,7 +115,7 @@ int main() {
     printf("PIB per Capta: R$ %.2f\n\n", pib_capta02);    
 
     //----------------------- EXIBINDO OS DADOS DE CADA CIDADE DE FORMA ORGANIZADA!!!  
-
+    //**************** Poderia usar somente esse print abaixo, mas não está errado!!! Só um comentário.
     //Cidade 01
     printf("****** Primeira cidade do estado de: %s ******\n\n", estado_A);
     printf("Cidade: %s \nCódigo: %s \nPopulação: %d \nÁrea: %.1f Km² \nPIB: R$ %.1f \nPontos turísticos: %d \nDensidade Populacional: %.2f\n PIB per Capta: R$ %.2f\n\n", cidade_01, cod_cidade01, habitantes_c1, km_area_c1,pib_c1, pontos_turisticos_c1, densidade_pp01, pib_capta01);

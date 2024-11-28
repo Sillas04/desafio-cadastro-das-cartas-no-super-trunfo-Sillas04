@@ -19,8 +19,8 @@ int main() {
     int pontos_turisticos_c1, pontos_turisticos_c2;
 
     // Variáveis de densidade e PIBpcpt
-    long double densidade_pp01, densidade_pp02;   
-    long double pib_capta01, pib_capta02;   
+    float densidade_pp01, densidade_pp02;   
+    float pib_capta01, pib_capta02;   
 
     // atribuindo valor a variavel "estado_A".
     printf("Digite o nome do Estado:\n");
@@ -85,11 +85,11 @@ int main() {
     
     //Cidade 01
     printf("****** Primeira cidade do estado de: %s ******\n\n", estado_A);
-    printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.1f Km² \nPIB: R$ %.1f Bilhões \nPontos turísticos: %d \nDensidade Populacional: %.2Lf hab/Km² \nPIB per Capta: R$ %.2ld\n\n", cidade_01, cod_cidade01, habitantes_c1, km_area_c1,pib_c1, pontos_turisticos_c1, densidade_pp01, pib_capta01);
+    printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.1f Km² \nPIB: R$ %.1f Bilhões \nPontos turísticos: %d \nDensidade Populacional: %.2f hab/Km² \nPIB per Capta: R$ %.2ld\n\n", cidade_01, cod_cidade01, habitantes_c1, km_area_c1,pib_c1, pontos_turisticos_c1, densidade_pp01, pib_capta01);
 
     //Cidade 02
     printf("****** Segunda cidade do estado de: %s ****** \n\n", estado_A);
-    printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.1f Km² \nPIB: R$ %.1f Bilhões \nPontos turísticos: %d \nDensidade Populacional: %.2Lf hab/Km² \nPIB per Capta: R$ %.2ld\n\n", cidade_02, cod_cidade02, habitantes_c2, km_area_c2,pib_c2, pontos_turisticos_c2, densidade_pp02, pib_capta02);
+    printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.1f Km² \nPIB: R$ %.1f Bilhões \nPontos turísticos: %d \nDensidade Populacional: %.2f  hab/Km² \nPIB per Capta: R$ %.2ld\n\n", cidade_02, cod_cidade02, habitantes_c2, km_area_c2,pib_c2, pontos_turisticos_c2, densidade_pp02, pib_capta02);
 
     return 0;
 }

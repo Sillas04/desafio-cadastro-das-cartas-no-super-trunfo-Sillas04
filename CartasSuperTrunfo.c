@@ -6,7 +6,7 @@
 // Siga os comentários para implementar cada parte do desafio.
 int main() {
     // Declarando variaveis para armazenar estados
-    char estado_A[30], estado_B[30], estado_C[30], estado_D[30], estado_E[30], estado_F[30], estado_G[30], estado_H[30];
+    char estado_A[30], estado_B[30], estado_C[30], estado_D[30], estado_E[30], estado_F[30], estado_G[30],  estado_H[30];
     
     // Declarando variaveis para armazenar nome da cidade.
     char cidade_01[30], cidade_02[30], cidade_03[30], cidade_04[30];

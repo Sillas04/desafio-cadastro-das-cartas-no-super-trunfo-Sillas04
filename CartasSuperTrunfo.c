@@ -6,21 +6,21 @@
 // Siga os comentários para implementar cada parte do desafio.
 int main() {
     // Declarando variaveis para armazenar estados
-    char estado_A[30], estado_B[30], estado_C[30], estado_D[30], estado_E[30], estado_F[30], estado_G[30],  estado_H[30];
+    char estado_A[30], estado_B[30];
     
     // Declarando variaveis para armazenar nome da cidade.
-    char cidade_01[30], cidade_02[30], cidade_03[30], cidade_04[30];
+    char cidade_01[30], cidade_02[30];
 
     // Declarando variaveis para cada atributo da cidade.    
-    char cod_cidade01[3], cod_cidade02[3];
-    int habitantes_c1, habitantes_c2;
+    char cod_cidade01[4], cod_cidade02[4];
+    unsigned long int habitantes_c1, habitantes_c2;
     float km_area_c1, km_area_c2;
     float pib_c1, pib_c2;       
     int pontos_turisticos_c1, pontos_turisticos_c2;
 
     // Variáveis de densidade e PIBpcpt
-    float densidade_pp01, densidade_pp02;   
-    float pib_capta01, pib_capta02;   
+    long double densidade_pp01, densidade_pp02;   
+    long double pib_capta01, pib_capta02;   
 
     // atribuindo valor a variavel "estado_A".
     printf("Digite o nome do Estado:\n");
@@ -34,10 +34,10 @@ int main() {
     scanf("%30s", cidade_01);
 
     printf("Digite o código da cidade: \n");
-    scanf("%3s", cod_cidade01);    
+    scanf("%4s", cod_cidade01);    
 
     printf("Digite a população da cidade:\n");
-    scanf("%d", &habitantes_c1);
+    scanf("%lu", &habitantes_c1);
 
     printf("Digite a área em Km²: \n");
     scanf("%f", &km_area_c1);
@@ -49,8 +49,8 @@ int main() {
     scanf("%d", &pontos_turisticos_c1);
 
     // Calculo da densidade populacional
-    densidade_pp01 = (float) habitantes_c1 / km_area_c1;
-    pib_capta01 = (float) (pib_c1 * 1e9) / habitantes_c1;         
+    densidade_pp01 = (float) (habitantes_c1 * 1000000) / km_area_c1;
+    pib_capta01 = (float) (pib_c1 * 1000000000) / habitantes_c1;         
 
    // Mensagem de sucesso ao cadastrar
     printf("\n****** Carta cadastrada com sucesso! ****** \n\n");
@@ -60,10 +60,10 @@ int main() {
     scanf("%30s", cidade_02);
 
     printf("Digite o código da cidade: \n");
-    scanf("%3s", cod_cidade02);
+    scanf("%4s", cod_cidade02);
 
     printf("Digite a população da cidade:\n");
-    scanf("%d", &habitantes_c2);
+    scanf("%lu", &habitantes_c2);
 
     printf("Digite a área em Km²: \n");
     scanf("%f", &km_area_c2);
@@ -75,8 +75,8 @@ int main() {
     scanf("%d", &pontos_turisticos_c2);  
 
     // Calculo densidade e PIB
-    densidade_pp02 = (float) habitantes_c2 / km_area_c2;
-    pib_capta02 = (float) (pib_c2 * 1e9) / habitantes_c2;    
+    densidade_pp02 = (float) (habitantes_c2 * 1000000) / km_area_c2;
+    pib_capta02 = (float) (pib_c2 * 1000000000) / habitantes_c2;    
 
    // Mensagem de sucesso ao cadastrar
     printf("\n****** Carta cadastrada com sucesso! ****** \n\n");  
@@ -85,11 +85,11 @@ int main() {
     
     //Cidade 01
     printf("****** Primeira cidade do estado de: %s ******\n\n", estado_A);
-    printf("Cidade: %s \nCódigo: %s \nPopulação: %d \nÁrea: %.1f Km² \nPIB: R$ %.1f \nPontos turísticos: %d \nDensidade Populacional: %.2f\n PIB per Capta: R$ %.2f\n\n", cidade_01, cod_cidade01, habitantes_c1, km_area_c1,pib_c1, pontos_turisticos_c1, densidade_pp01, pib_capta01);
+    printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.1f Km² \nPIB: R$ %.1f Bilhões \nPontos turísticos: %d \nDensidade Populacional: %.2Lf hab/Km² \nPIB per Capta: R$ %.2ld\n\n", cidade_01, cod_cidade01, habitantes_c1, km_area_c1,pib_c1, pontos_turisticos_c1, densidade_pp01, pib_capta01);
 
     //Cidade 02
     printf("****** Segunda cidade do estado de: %s ****** \n\n", estado_A);
-    printf("Cidade: %s \nCódigo: %s \nPopulação: %d \nÁrea: %.1f Km² \nPIB: R$ %.1f \nPontos turísticos: %d \nDensidade Populacional: %.2f\n PIB per Capta: R$ %.2f\n\n", cidade_02, cod_cidade02, habitantes_c2, km_area_c2,pib_c2, pontos_turisticos_c2, densidade_pp02, pib_capta02);
+    printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.1f Km² \nPIB: R$ %.1f Bilhões \nPontos turísticos: %d \nDensidade Populacional: %.2Lf hab/Km² \nPIB per Capta: R$ %.2ld\n\n", cidade_02, cod_cidade02, habitantes_c2, km_area_c2,pib_c2, pontos_turisticos_c2, densidade_pp02, pib_capta02);
 
     return 0;
 }

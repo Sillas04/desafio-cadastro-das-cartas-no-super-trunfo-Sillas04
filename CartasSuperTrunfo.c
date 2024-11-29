@@ -12,7 +12,7 @@ int main() {
     char cidade_a01[30], cidade_a02[30], cidade_b01[30], cidade_b02[30];
 
     // Declarando variaveis para cada atributo da cidade.    
-    char cod_cidade_a01[4], cod_cidade_a02[4], cod_cidade_b01, cod_cidade_b02;
+    char cod_cidade_a01[4], cod_cidade_a02[4], cod_cidade_b01[4], cod_cidade_b02[4];
     unsigned long int habitantes_a01, habitantes_a02, habitantes_b01, habitantes_b02;
     float km_area_a01, km_area_a02, km_area_b01, km_area_b02;
     float pib_a01, pib_a02, pib_b01, pib_b02;       
@@ -89,6 +89,19 @@ int main() {
     // Mensagem de sucesso ao cadastrar
     printf("\n****** Carta cadastrada com sucesso! ****** \n\n"); 
 
+    //----------------------- EXIBINDO OS DADOS DO ESTADO A COM SUAS CIDADES DE FORMA ORGANIZADA!!!  
+
+    //---------------------------ESTADO_A------------------------    
+    //Cidade A01
+    printf("--------------------  Primeira cidade do estado de: %s  ---------------\n\n", estado_A);
+    printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.2f Km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade Populacional: %.2f hab/Km² \nPIB per Capta: R$ %.2f\n\n", cidade_a01, cod_cidade_a01, habitantes_a01, km_area_a01,pib_a01, pontos_turisticos_a01, densidade_pp_a01, pib_capta_a01);
+
+    //Cidade A02
+    printf("****** Segunda cidade do estado de: %s ****** \n\n", estado_A);
+    printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.2f Km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade Populacional: %.2f  hab/Km² \nPIB per Capta: R$ %.2f\n\n", cidade_a02, cod_cidade_a02, habitantes_a02, km_area_a02,pib_a02, pontos_turisticos_a02, densidade_pp_a02, pib_capta_a02);
+
+
+
     // -------------------------------------------------------------- cadastro do estado B
     // atribuindo valor a variavel "estado_b".
     printf("Digite o nome do segundo estado:\n");
@@ -146,18 +159,8 @@ int main() {
     // Calculo da densidade populacional
     densidade_pp_b02 = (float) habitantes_b02 / km_area_b02;
     pib_capta_b02 = (float) pib_b02 / habitantes_b02 ;
-
-
-    //----------------------- EXIBINDO OS DADOS DE CADA CIDADE DE FORMA ORGANIZADA!!!  
-
-    //---------------------------ESTADO_A------------------------    
-    //Cidade A01
-    printf("****** Primeira cidade do estado de: %s ******\n\n", estado_A);
-    printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.2f Km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade Populacional: %.2f hab/Km² \nPIB per Capta: R$ %.2f\n\n", cidade_a01, cod_cidade_a01, habitantes_a01, km_area_a01,pib_a01, pontos_turisticos_a01, densidade_pp_a01, pib_capta_a01);
-
-    //Cidade A02
-    printf("****** Segunda cidade do estado de: %s ****** \n\n", estado_A);
-    printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.2f Km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade Populacional: %.2f  hab/Km² \nPIB per Capta: R$ %.2f\n\n", cidade_a02, cod_cidade_a02, habitantes_a02, km_area_a02,pib_a02, pontos_turisticos_a02, densidade_pp_a02, pib_capta_a02);
+   
+    //----------------------- EXIBINDO OS DADOS DO ESTADO B COM SUAS CIDADES DE FORMA ORGANIZADA!!
 
     //----------------------------ESTADO_B----------------------
     //Cidade B01
@@ -175,11 +178,7 @@ int main() {
     total_pib_a = pib_a01 + pib_a02;  
     total_pontos_turisticos_a = pontos_turisticos_a01 + pontos_turisticos_a02; 
     total_densidade_a =(float) total_habitantes_a / total_km_area_a;
-    total_pib_capta_a = (float) total_pib_a / total_habitantes_a;
-
-    //------------------------------- Exibição de propriedades do estado A
-    printf("Informações gerais do estado:  %s\n", estado_A);
-    printf("População: %lu habitantes \nÁrea: %.1f km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade populacional: %.2f hab/Km² \nPIB per capta: R$ %.2f \n\n", total_habitantes_a, total_km_area_a, total_pib_a, total_pontos_turisticos_a, total_densidade_a, total_pib_capta_a);
+    total_pib_capta_a = (float) total_pib_a / total_habitantes_a;  
 
     //---------------------- Atribuindo valores as variaveis gerais do estado B
     total_habitantes_b = habitantes_b01 + habitantes_b02;   
@@ -189,8 +188,15 @@ int main() {
     total_densidade_b =(float) total_habitantes_b / total_km_area_b;
     total_pib_capta_b = (float) total_pib_b / total_habitantes_b;
 
+    // ----------------------**** EXIBIÇÃO DE DADOS GERAIS DE ESTADOS **********-----------
+    printf("+-+-+-+-+-+-+-+-+-+-+- DADOS DE ESTADOS +-+-+-+-+-+-+-+-+-+-+-\n\n");
+
+    //---------------------------------------------- Exibição de propriedades do estado A
+    printf(" ************  Estado:  %s\n\n  **************", estado_A);
+    printf("População: %lu habitantes \nÁrea: %.1f km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade populacional: %.2f hab/Km² \nPIB per capta: R$ %.2f \n\n", total_habitantes_a, total_km_area_a, total_pib_a, total_pontos_turisticos_a, total_densidade_a, total_pib_capta_a);
+
     //------------------------------- Exibição de propriedades do estado B
-    printf("Informações gerais do estado:  %s\n", estado_B);
+    printf(" ************  Estado:  %s\n\n  **************", estado_B);
     printf("População: %lu habitantes \nÁrea: %.1f km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade populacional: %.2f hab/Km² \nPIB per capta: R$ %.2f \n\n", total_habitantes_b, total_km_area_b, total_pib_b, total_pontos_turisticos_b, total_densidade_b, total_pib_capta_b);
 
     return 0;

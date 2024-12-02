@@ -22,7 +22,7 @@ int main() {
     float densidade_pp_a01, densidade_pp_a02, densidade_pp_b01, densidade_pp_b02;   
     float pib_capta_a01, pib_capta_a02, pib_capta_b01, pib_capta_b02;
 
-    //Variaveis de soma geral do estado para comparação 
+    //Variaveis de soma geral do estado para exibição 
     unsigned long total_habitantes_a, total_habitantes_b;   
     float total_km_area_a, total_km_area_b;   
     float total_pib_a, total_pib_b;  
@@ -30,6 +30,14 @@ int main() {
     float total_densidade_a, total_densidade_b;
     float total_pib_capta_a, total_pib_capta_b;
 
+    //Variaveis de comparação do estado A com lógica de calculo e respostas binárias
+    unsigned long populacao_vencedora_A, populacao_vencedora_B;
+    float area_vencedora_A, area_vencedora_B;
+    float pib_vencedora_A, pib_vencedora_B;
+    int pontos_turisticos_vencedora_A, pontos_turisticos_vencedora_B;
+    float densidade_vencedora_A, densidade_vencedora_B;
+    float pib_capta_vencedora_A, pib_capta_vencedora_B;
+   
     // ------------------------------------------------atribuindo valor a variavel "estado_A".
     printf("Digite o nome do Estado:\n");
     scanf("%30s", estado_A);      
@@ -192,12 +200,21 @@ int main() {
     printf("+-+-+-+-+-+-+-+-+-+-+- DADOS DE ESTADOS +-+-+-+-+-+-+-+-+-+-+-\n\n");
 
     //---------------------------------------------- Exibição de propriedades do estado A
-    printf(" ************  Estado:  %s\n\n  **************", estado_A);
+    printf(" ************  Estado:  %s  **************\n\n", estado_A);
     printf("População: %lu habitantes \nÁrea: %.1f km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade populacional: %.2f hab/Km² \nPIB per capta: R$ %.2f \n\n", total_habitantes_a, total_km_area_a, total_pib_a, total_pontos_turisticos_a, total_densidade_a, total_pib_capta_a);
 
     //------------------------------- Exibição de propriedades do estado B
-    printf(" ************  Estado:  %s\n\n  **************", estado_B);
+    printf(" ************  Estado:  %s  **************\n\n", estado_B);
     printf("População: %lu habitantes \nÁrea: %.1f km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade populacional: %.2f hab/Km² \nPIB per capta: R$ %.2f \n\n", total_habitantes_b, total_km_area_b, total_pib_b, total_pontos_turisticos_b, total_densidade_b, total_pib_capta_b);
+
+    //Implementando a lógica para comparação de estados
+    populacao_vencedora_A = total_habitantes_a >= total_habitantes_b; 
+    populacao_vencedora_B = total_habitantes_b >= total_habitantes_a; 
+    
+    
+    // ------------------------ COMPARAÇÃO DE PROPRIEDADES DE ESTADOS ---------------
+    printf("+-+-+-+-+-+-+-  PONTUAÇÃO  +-+-+-+-+-+-+-\n\n");
+    printf("População %s: %lu   ||  População %s: %lu\n", estado_A ,populacao_vencedora_A, estado_B, populacao_vencedora_B);
 
     return 0;
 }

@@ -241,9 +241,19 @@ int main() {
     
     
     // ------------------------ COMPARAÇÃO DE PROPRIEDADES DE ESTADOS ---------------
-    printf("+-+-+-+-+-+-+-  PONTUAÇÃO  +-+-+-+-+-+-+-\n\n");   
-    
+    printf("+-+-+-+-+-+-+- |||  PONTUAÇÃO ||| +-+-+-+-+-+-+-\n\n");
+
+    //Exibição "pontos" cidade_a01
     printf("Cidade: %s \nCódigo: %s \nPopulação: %d \nÁrea: %d \nPIB: %d \nPontos turísticos: %d \nDensidade populacional: %d \nPIB per capta: %d \n\n",cidade_a01, cod_cidade_a01, populacao_vencedora_A01, area_vencedora_A01, pib_vencedora_A01, pontos_turisticos_vencedora_A01, densidade_vencedora_A01, pib_capta_vencedora_A01);
+    
+    //Exibição "pontos" cidade_a02
+    printf("Cidade: %s \nCódigo: %s \nPopulação: %d \nÁrea: %d \nPIB: %d \nPontos turísticos: %d \nDensidade populacional: %d \nPIB per capta: %d \n\n",cidade_a02, cod_cidade_a02, populacao_vencedora_A02, area_vencedora_A02, pib_vencedora_A02, pontos_turisticos_vencedora_A02, densidade_vencedora_A02, pib_capta_vencedora_A02);
+    
+    //Exibição "pontos" cidade_b01
+    printf("Cidade: %s \nCódigo: %s \nPopulação: %d \nÁrea: %d \nPIB: %d \nPontos turísticos: %d \nDensidade populacional: %d \nPIB per capta: %d \n\n",cidade_b01, cod_cidade_b01, populacao_vencedora_B01, area_vencedora_B01, pib_vencedora_B01, pontos_turisticos_vencedora_B01, densidade_vencedora_B01, pib_capta_vencedora_B01);
+    
+    //Exibição "pontos" cidade_b02
+    printf("Cidade: %s \nCódigo: %s \nPopulação: %d \nÁrea: %d \nPIB: %d \nPontos turísticos: %d \nDensidade populacional: %d \nPIB per capta: %d \n\n",cidade_b02, cod_cidade_b02, populacao_vencedora_B02, area_vencedora_B02, pib_vencedora_B02, pontos_turisticos_vencedora_B02, densidade_vencedora_B02, pib_capta_vencedora_B02);
     
     
 

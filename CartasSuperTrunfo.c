@@ -22,7 +22,7 @@ int main() {
     float densidade_pp_a01, densidade_pp_a02, densidade_pp_b01, densidade_pp_b02;   
     float pib_capta_a01, pib_capta_a02, pib_capta_b01, pib_capta_b02;
 
-    //Variaveis de soma geral do estado para exibição 
+    //Variaveis armazenar soma geral do estado para exibição 
     unsigned long total_habitantes_a, total_habitantes_b;   
     float total_km_area_a, total_km_area_b;   
     float total_pib_a, total_pib_b;  
@@ -30,7 +30,7 @@ int main() {
     float total_densidade_a, total_densidade_b;
     float total_pib_capta_a, total_pib_capta_b;
 
-    //Variaveis de comparação do estado A com lógica de calculo e respostas binárias
+    //Variaveis de comparação das cidades para lógica de calculo e respostas binárias
     int populacao_vencedora_A01, populacao_vencedora_A02, populacao_vencedora_B01, populacao_vencedora_B02;
     int area_vencedora_A01, area_vencedora_A02, area_vencedora_B01, area_vencedora_B02;
     int pib_vencedora_A01, pib_vencedora_A02, pib_vencedora_B01, pib_vencedora_B02;
@@ -38,6 +38,12 @@ int main() {
     int densidade_vencedora_A01, densidade_vencedora_A02, densidade_vencedora_B01, densidade_vencedora_B02;
     int pib_capta_vencedora_A01, pib_capta_vencedora_A02, pib_capta_vencedora_B01, pib_capta_vencedora_B02;
    
+    //Variaveis para armazenar o "SUPER PODER" de cada carta somando seus atributos
+    float power_a01;
+    float power_a02;
+    float power_b01;
+    float power_b02;
+    
     // atribuindo valor a variavel "estado_A".
     printf("Digite o nome do Estado:\n");
     scanf("%30s", estado_A);      
@@ -108,8 +114,10 @@ int main() {
     //Cidade A02
     printf("--------------------  Segunda cidade do estado de: %s  ---------------\n\n", estado_A);
     printf("Cidade: %s \nCódigo: %s \nPopulação: %lu Habitantes \nÁrea: %.2f Km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade Populacional: %.2f  hab/Km² \nPIB per Capta: R$ %.2f\n\n", cidade_a02, cod_cidade_a02, habitantes_a02, km_area_a02,pib_a02, pontos_turisticos_a02, densidade_pp_a02, pib_capta_a02);
-
-    //  CADASTRO DO ESTADO B    
+    
+    //  CADASTRO DO ESTADO B
+    printf("\n--------------- Cadastro do segundo Estado!! ---------------\n\n");    
+        
     printf("Digite o nome do segundo estado:\n");
     scanf("%30s", estado_B);
 
@@ -209,7 +217,7 @@ int main() {
     printf(" ************  ESTADO:  %s  **************\n\n", estado_B);
     printf("População: %lu habitantes \nÁrea: %.1f km² \nPIB: R$ %.2f \nPontos turísticos: %d \nDensidade populacional: %.2f hab/Km² \nPIB per capta: R$ %.2f \n\n", total_habitantes_b, total_km_area_b, total_pib_b, total_pontos_turisticos_b, total_densidade_b, total_pib_capta_b);
 
-    //Implementando a lógica para comparação de cidade_a01
+    //Implementando a lógica para comparação de cidade_a01 com cidade_b01
     populacao_vencedora_A01 = habitantes_a01 >= habitantes_b01;
     area_vencedora_A01 = km_area_a01 >= km_area_b01;
     pib_vencedora_A01 = pib_a01 >= pib_b01;
@@ -217,7 +225,7 @@ int main() {
     densidade_vencedora_A01 = densidade_pp_a01 <= densidade_pp_b01;
     pib_capta_vencedora_A01 = pib_capta_a01 >= pib_capta_b01;
 
-    //Implementando a lógica para comparação de cidade_b01
+    //Implementando a lógica para comparação de cidade_b01 com cidade_b01
     populacao_vencedora_B01 = habitantes_b01 >= habitantes_a01;
     area_vencedora_B01 = km_area_b01 >= km_area_a01;
     pib_vencedora_B01 = pib_b01 >= pib_a01;
@@ -225,6 +233,9 @@ int main() {
     densidade_vencedora_B01 = densidade_pp_b01 <= densidade_pp_a01;
     pib_capta_vencedora_B01 = pib_capta_b01 >= pib_capta_a01;
 
+    //SUPER PODER DAS CARTAS a01 - b01
+    power_a01 =(pib_capta_a01 / 1000) + (densidade_pp_a01 / 100);
+    power_b01 =(pib_capta_a01 / 1000) + (densidade_pp_a01 / 100);
     //Exibindo os dados de vantagem da cidade_a01 em cima da cidade_b01 e vice-versa.
     printf("-------------------------------------------- Vantagem --------------------------------------------\n\n");
     printf("Cidade: %s                  ||||    Cidade: %s \n",cidade_a01, cidade_b01);
@@ -235,6 +246,7 @@ int main() {
     printf("Pontos Turísticos: %d       ||||    Pontos Turísticos: %d \n", pontos_turisticos_vencedora_A01, pontos_turisticos_vencedora_B01);
     printf("Densidade População: %d     ||||    Densidade População: %d \n", densidade_vencedora_A01, densidade_vencedora_B01);
     printf("PIB per capta: %d           ||||    PIB per capta: %d \n", pib_capta_vencedora_A01, pib_capta_vencedora_B01);
+    printf("SUPER PODER: %.1f           ||||    SUPER PODER: %.1f \n\n", power_a01, power_b01);
 
     return 0;
 }

@@ -31,12 +31,12 @@ int main() {
     float total_pib_capta_a, total_pib_capta_b;
 
     //Variaveis de comparação do estado A com lógica de calculo e respostas binárias
-    unsigned long populacao_vencedora_A01, populacao_vencedora_A02, populacao_vencedora_B01, populacao_vencedora_B02;
-    float area_vencedora_A01, area_vencedora_A02, area_vencedora_B01, area_vencedora_B02;
-    float pib_vencedora_A01, pib_vencedora_A02, pib_vencedora_B01, pib_vencedora_B02;
+    int populacao_vencedora_A01, populacao_vencedora_A02, populacao_vencedora_B01, populacao_vencedora_B02;
+    int area_vencedora_A01, area_vencedora_A02, area_vencedora_B01, area_vencedora_B02;
+    int pib_vencedora_A01, pib_vencedora_A02, pib_vencedora_B01, pib_vencedora_B02;
     int pontos_turisticos_vencedora_A01, pontos_turisticos_vencedora_A02, pontos_turisticos_vencedora_B01, pontos_turisticos_vencedora_B02;
-    float densidade_vencedora_A01, densidade_vencedora_A02, densidade_vencedora_B01, densidade_vencedora_B02;
-    float pib_capta_vencedora_A01, pib_capta_vencedora_A02, pib_capta_vencedora_B01, pib_capta_vencedora_B02;
+    int densidade_vencedora_A01, densidade_vencedora_A02, densidade_vencedora_B01, densidade_vencedora_B02;
+    int pib_capta_vencedora_A01, pib_capta_vencedora_A02, pib_capta_vencedora_B01, pib_capta_vencedora_B02;
    
     // ------------------------------------------------atribuindo valor a variavel "estado_A".
     printf("Digite o nome do Estado:\n");
@@ -241,8 +241,9 @@ int main() {
     
     
     // ------------------------ COMPARAÇÃO DE PROPRIEDADES DE ESTADOS ---------------
-    printf("+-+-+-+-+-+-+-  PONTUAÇÃO  +-+-+-+-+-+-+-\n\n");
+    printf("+-+-+-+-+-+-+-  PONTUAÇÃO  +-+-+-+-+-+-+-\n\n");   
     
+    printf("Cidade: %s \nCódigo: %s \nPopulação: %d \nÁrea: %d \nPIB: %d \nPontos turísticos: %d \nDensidade populacional: %d \nPIB per capta: %d \n\n",cidade_a01, cod_cidade_a01, populacao_vencedora_A01, area_vencedora_A01, pib_vencedora_A01, pontos_turisticos_vencedora_A01, densidade_vencedora_A01, pib_capta_vencedora_A01);
     
     
 

@@ -235,18 +235,18 @@ int main() {
 
     //SUPER PODER DAS CARTAS a01 - b01
     power_a01 =(pib_capta_a01 / 1000) + (densidade_pp_a01 / 100);
-    power_b01 =(pib_capta_a01 / 1000) + (densidade_pp_a01 / 100);
+    power_b01 =(pib_capta_b01 / 1000) + (densidade_pp_b01 / 100);
     //Exibindo os dados de vantagem da cidade_a01 em cima da cidade_b01 e vice-versa.
     printf("-------------------------------------------- Vantagem --------------------------------------------\n\n");
-    printf("Cidade: %s                  ||||    Cidade: %s \n",cidade_a01, cidade_b01);
-    printf("Código: %s                  ||||    Código: %s \n", cod_cidade_a01, cod_cidade_b01);
-    printf("População: %d               ||||    População: %d \n", populacao_vencedora_A01, populacao_vencedora_B01);
-    printf("Área: %d                    ||||    Área: %d \n", area_vencedora_A01, area_vencedora_B01);
-    printf("PIB: %d                     ||||    PIB: %d \n", pib_vencedora_A01, pib_vencedora_B01);
-    printf("Pontos Turísticos: %d       ||||    Pontos Turísticos: %d \n", pontos_turisticos_vencedora_A01, pontos_turisticos_vencedora_B01);
-    printf("Densidade População: %d     ||||    Densidade População: %d \n", densidade_vencedora_A01, densidade_vencedora_B01);
-    printf("PIB per capta: %d           ||||    PIB per capta: %d \n", pib_capta_vencedora_A01, pib_capta_vencedora_B01);
-    printf("SUPER PODER: %.1f           ||||    SUPER PODER: %.1f \n\n", power_a01, power_b01);
+    printf("Cidade: %s                  ||    Cidade: %s \n",cidade_a01, cidade_b01);
+    printf("Código: %s                  ||    Código: %s \n", cod_cidade_a01, cod_cidade_b01);
+    printf("População: %d               ||    População: %d \n", populacao_vencedora_A01, populacao_vencedora_B01);
+    printf("Área: %d                    ||    Área: %d \n", area_vencedora_A01, area_vencedora_B01);
+    printf("PIB: %d                     ||    PIB: %d \n", pib_vencedora_A01, pib_vencedora_B01);
+    printf("Pontos Turísticos: %d       ||    Pontos Turísticos: %d \n", pontos_turisticos_vencedora_A01, pontos_turisticos_vencedora_B01);
+    printf("Densidade População: %d     ||    Densidade População: %d \n", densidade_vencedora_A01, densidade_vencedora_B01);
+    printf("PIB per capta: %d           ||    PIB per capta: %d \n", pib_capta_vencedora_A01, pib_capta_vencedora_B01);
+    printf("SUPER PODER: %.1f           ||    SUPER PODER: %.1f \n\n", power_a01, power_b01);
 
     return 0;
 }

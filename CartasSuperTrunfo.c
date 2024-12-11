@@ -225,7 +225,7 @@ int main() {
     densidade_vencedora_A01 = densidade_pp_a01 <= densidade_pp_b01;
     pib_capta_vencedora_A01 = pib_capta_a01 >= pib_capta_b01;
 
-    //Implementando a lógica para comparação de cidade_b01 com cidade_b01
+    //Implementando a lógica para comparação de cidade_b01 com cidade_a01
     populacao_vencedora_B01 = habitantes_b01 >= habitantes_a01;
     area_vencedora_B01 = km_area_b01 >= km_area_a01;
     pib_vencedora_B01 = pib_b01 >= pib_a01;
@@ -234,9 +234,10 @@ int main() {
     pib_capta_vencedora_B01 = pib_capta_b01 >= pib_capta_a01;
 
     //SUPER PODER DAS CARTAS a01 - b01
-    power_a01 =(pib_capta_a01 / 1000) + (densidade_pp_a01 / 100);
-    power_b01 =(pib_capta_b01 / 1000) + (densidade_pp_b01 / 100);
+    power_a01 =(unsigned long int) (habitantes_a01 + km_area_a01 + pib_a01 + pontos_turisticos_a01 +pib_capta_a01) - densidade_pp_a01;
+    power_b01 =(unsigned long int) (habitantes_b01 + km_area_b01 + pib_b01 + pontos_turisticos_b01 +pib_capta_b01) - densidade_pp_b01;
     //Exibindo os dados de vantagem da cidade_a01 em cima da cidade_b01 e vice-versa.
+
     printf("-------------------------------------------- Vantagem --------------------------------------------\n\n");
     printf("Cidade: %s                  ||    Cidade: %s \n",cidade_a01, cidade_b01);
     printf("Código: %s                  ||    Código: %s \n", cod_cidade_a01, cod_cidade_b01);
@@ -246,7 +247,60 @@ int main() {
     printf("Pontos Turísticos: %d       ||    Pontos Turísticos: %d \n", pontos_turisticos_vencedora_A01, pontos_turisticos_vencedora_B01);
     printf("Densidade População: %d     ||    Densidade População: %d \n", densidade_vencedora_A01, densidade_vencedora_B01);
     printf("PIB per capta: %d           ||    PIB per capta: %d \n", pib_capta_vencedora_A01, pib_capta_vencedora_B01);
-    printf("SUPER PODER: %.1f           ||    SUPER PODER: %.1f \n\n", power_a01, power_b01);
+    printf("SUPER PODER: %d             ||    SUPER PODER: %d \n\n", power_a01, power_b01);
 
+    //Implementando a lógica para comparação de cidade_a02 com cidade_b02
+    populacao_vencedora_A02 = habitantes_a02 >= habitantes_b02;
+    area_vencedora_A02 = km_area_a02 >= km_area_b02;
+    pib_vencedora_A02 = pib_a02 >= pib_b02;
+    pontos_turisticos_vencedora_A02 = pontos_turisticos_a02 >= pontos_turisticos_b02;
+    densidade_vencedora_A02 = densidade_pp_a02 <= densidade_pp_b02;
+    pib_capta_vencedora_A02 = pib_capta_a02 >= pib_capta_b02;
+
+    //Implementando a lógica para comparação de cidade_b02 com cidade_a02
+    populacao_vencedora_B02 = habitantes_b02 >= habitantes_a02;
+    area_vencedora_B02 = km_area_b02 >= km_area_a02;
+    pib_vencedora_B02 = pib_b02 >= pib_a02;
+    pontos_turisticos_vencedora_B02 = pontos_turisticos_b02 >= pontos_turisticos_a02;
+    densidade_vencedora_B02 = densidade_pp_b02 <= densidade_pp_a02;
+    pib_capta_vencedora_B02 = pib_capta_b02 >= pib_capta_a02;
+
+    //SUPER PODER DAS CARTAS a01 - b01
+    power_a02 =(unsigned long int) (habitantes_a02 + km_area_a02 + pib_a02 + pontos_turisticos_a02 +pib_capta_a02) - densidade_pp_a02;
+    power_b02 =(unsigned long int) (habitantes_b02 + km_area_b02 + pib_b02 + pontos_turisticos_b02 +pib_capta_b02) - densidade_pp_b02;
+    //Exibindo os dados de vantagem da cidade_a01 em cima da cidade_b01 e vice-versa.
+    printf("-------------------------------------------- Vantagem --------------------------------------------\n\n");
+    printf("Cidade: %s                  ||    Cidade: %s \n",cidade_a02, cidade_b02);
+    printf("Código: %s                  ||    Código: %s \n", cod_cidade_a02, cod_cidade_b02);
+    printf("População: %d               ||    População: %d \n", populacao_vencedora_A02, populacao_vencedora_B02);
+    printf("Área: %d                    ||    Área: %d \n", area_vencedora_A02, area_vencedora_B02);
+    printf("PIB: %d                     ||    PIB: %d \n", pib_vencedora_A02, pib_vencedora_B02);
+    printf("Pontos Turísticos: %d       ||    Pontos Turísticos: %d \n", pontos_turisticos_vencedora_A02, pontos_turisticos_vencedora_B02);
+    printf("Densidade População: %d     ||    Densidade População: %d \n", densidade_vencedora_A02, densidade_vencedora_B02);
+    printf("PIB per capta: %d           ||    PIB per capta: %d \n", pib_capta_vencedora_A02, pib_capta_vencedora_B02);
+    printf("SUPER PODER: %d             ||    SUPER PODER: %d \n\n", power_a02, power_b02);
+
+    /*
+        EXPLICAÇÃO DAS ULTIMAS LINHAS DE CÓDIGO!!
+
+        NESTA ULTIMA PARTE FOI PENSADO MAIS NA VIZUALIZAÇÃO! POIS O FALSE E O TRUE SERIA APRESENTADO NO CÓDIGO ESPECIFICO:
+        
+        DETALHANDO:
+                populacao_vencedora_A01 = habitantes_a01 >= habitantes_b01;
+        DEPOIS FOI INVERTIDO:
+                populacao_vencedora_B01 = habitantes_b01 >= habitantes_a01;
+
+        NESTE CASO, COMO A VIZUALIZAÇÃO ESTÁ LADO A LADO SEPARADOS POR BARRAS "||" ENTÃO SE UMA CONDIÇÃO FOSSE "FALSE" A CARTA AO LADO RECEBERIA O "TRUE" E VICE VERSA
+
+        EU ACHO QUE SE EU FIZESSE DESTA FORMA:
+                populacao_vencedora_A01 = habitantes_a01 >= habitantes_b01;
+        DEPOIS FIZESSE OUTRA COMPARAÇÃO
+                populacao_vencedora_B02 = habitantes_b02 >= habitantes_a02;
+        
+        A VIZUALIZAÇÃO FICARIA ASSIM: 
+                                        CIDADE: A1  ||  CIDADE: B1
+                                        POPU: true || POPU:        A COMPARAÇÃO ESTÁ SENDO FEITA EM CIMA DA CIDADE A01 MAS NÃO ESTÁ SENDO FEITA PARA A CIDADE B01
+                                                                    QUE RESULTARIA A FALTA DE "PONTOS" DO LADO DELA QUANDO ELA GANHASSE EM UM ATRIBUTO.         
+    */
     return 0;
 }
